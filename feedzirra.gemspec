@@ -1,12 +1,13 @@
-# -*- encoding: utf-8 -*-
-require File.expand_path('../lib/feedzirra/version', __FILE__)
+# frozen_string_literal: true
+
+require File.expand_path('lib/feedzirra/version', __dir__)
 
 Gem::Specification.new do |s|
   s.name    = 'feedzirra'
   s.version = Feedzirra::VERSION
   s.license = 'MIT'
 
-  s.authors  = ['Paul Dix', 'Julien Kirch', "Ezekiel Templin"]
+  s.authors  = ['Paul Dix', 'Julien Kirch', 'Ezekiel Templin']
   s.email    = 'feedzirra@googlegroups.com'
   s.homepage = 'http://github.com/pauldix/feedzirra'
 
@@ -19,10 +20,10 @@ Gem::Specification.new do |s|
 
   s.platform = Gem::Platform::RUBY
 
+  s.add_dependency 'curb',              '~> 0.9.6'
+  s.add_dependency 'loofah',            '~> 1.2.1'
   s.add_dependency 'nokogiri',          '~> 1.6.0'
   s.add_dependency 'sax-machine',       '~> 0.2.1'
-  s.add_dependency 'curb',              '~> 0.8.1'
-  s.add_dependency 'loofah',            '~> 1.2.1'
 
   s.add_development_dependency 'rspec', '~> 2.13.0'
 end
